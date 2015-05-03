@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 
 setup(
     name='django-gulp',
@@ -16,7 +16,7 @@ setup(
 
     license='MIT',
 
-    packages=['django_gulp'],
+    packages=find_packages(),
 
     install_requires=[],
 
