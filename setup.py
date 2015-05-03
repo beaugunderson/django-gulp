@@ -16,7 +16,7 @@ setup(
 
     license='MIT',
 
-    py_modules=['django_gulp'],
+    packages=['django_gulp'],
 
     install_requires=[],
 
