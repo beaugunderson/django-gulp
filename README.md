@@ -2,7 +2,7 @@
 
 ### Installation
 
-Add "polls" to your `INSTALLED_APPS` setting like this:
+Add `"django_gulp"` to your `INSTALLED_APPS` setting like this:
 
 ```
 INSTALLED_APPS = (
