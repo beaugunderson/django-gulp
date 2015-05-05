@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import atexit
 import futures
 import os
@@ -46,16 +48,16 @@ class Command(StaticfilesRunserverCommand):
     @staticmethod
     def gulp_exited_cb(future):
         if future.exception():
-            print traceback.format_exc()
+            print(traceback.format_exc())
 
             children = psutil.Process().children(recursive=True)
 
             for child in children:
-                print '>>> Killing pid {}'.format(child.pid)
+                print('>>> Killing pid {}'.format(child.pid))
 
                 child.send_signal(SIGTERM)
 
-            print '>>> Exiting'
+            print('>>> Exiting')
 
             # It would be nice to be able to raise a CommandError or use
             # sys.kill here but neither of those stop the runserver instance
