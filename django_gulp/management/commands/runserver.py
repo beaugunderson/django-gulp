@@ -66,7 +66,10 @@ class Command(StaticfilesRunserverCommand):
             os._exit(1)
 
     def handle(self, *args, **options):
-        env = load_env()
+        try:
+            env = load_env()
+        except IOError:
+            env = {}
 
         # XXX: In Django 1.8 this changes to:
         # if 'PORT' in env and not options.get('addrport'):
