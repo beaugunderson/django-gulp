@@ -18,7 +18,16 @@ setup(
 
     packages=find_packages(),
 
-    install_requires=[],
+    install_requires=[
+        'ansicolors==1.0.2',
+        'env_tools==2.0',
+        'futures==2.2.0',
+        'psutil==2.2.1',
+    ],
+
+    tests_require=[
+        'django==1.8.1',
+    ],
 
     setup_requires=[
         'setuptools-markdown'
