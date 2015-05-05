@@ -1,7 +1,6 @@
 from __future__ import print_function
 
 import atexit
-import futures
 import os
 import psutil
 import subprocess
@@ -9,6 +8,8 @@ import sys
 import traceback
 
 from signal import SIGTERM
+
+import futures
 
 from colors import color
 
