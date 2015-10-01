@@ -17,6 +17,7 @@ from django.contrib.staticfiles.management.commands.runserver import Command \
     as StaticfilesRunserverCommand
 from django.core.management.base import CommandError
 from django.core.servers import basehttp
+from django.conf import settings
 
 from env_tools import load_env
 
@@ -101,8 +102,9 @@ class Command(StaticfilesRunserverCommand):
     def start_gulp(self):
         self.stdout.write('>>> Starting gulp')
 
+        gulp_command = getattr(settings, 'GULP_DEVELOP_COMMAND', 'gulp')
         self.gulp_process = subprocess.Popen(
-            ['gulp'],
+            [gulp_command],
             shell=True,
             stdin=subprocess.PIPE,
             stdout=self.stdout,
