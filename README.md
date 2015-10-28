@@ -22,6 +22,11 @@ INSTALLED_APPS = (
 Now when you run `./manage.py runserver` or `./manage.py collectstatic` your
 `gulp` tasks will run as well!
 
+### Settings
+
+`GULP_PRODUCTION_COMMAND` defaults to `gulp build --production`.
+`GULP_DEVELOP_COMMAND` defaults to `gulp`.
+
 ### Heroku
 
 `django-gulp` works on Heroku! You'll just need to use buildpack-multi and make
