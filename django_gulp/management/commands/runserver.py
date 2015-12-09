@@ -9,7 +9,7 @@ import traceback
 
 from signal import SIGTERM
 
-import futures
+from concurrent.futures import ThreadPoolExecutor
 
 from colors import color
 
@@ -83,7 +83,7 @@ class Command(StaticfilesRunserverCommand):
         # autoreloader with RUN_MAIN set to true, we have to check for
         # this to avoid running gulp twice.
         if not os.getenv('RUN_MAIN', False):
-            pool = futures.ThreadPoolExecutor(max_workers=1)
+            pool = ThreadPoolExecutor(max_workers=1)
 
             gulp_thread = pool.submit(self.start_gulp)
             gulp_thread.add_done_callback(self.gulp_exited_cb)
