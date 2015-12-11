@@ -1,6 +1,6 @@
 ## django-gulp
 
-`django-gulp` overrides `./manage.py runserver` and `./manage.py collecstatic`
+`django-gulp` overrides `./manage.py runserver` and `./manage.py collectstatic`
 so that they also run your gulp tasks.
 
 I've used this in conjunction with watchify and livereload in gulp, so that my
@@ -10,7 +10,9 @@ compiled from SASS.
 
 ### Installation
 
-Add `"django_gulp"` to your `INSTALLED_APPS` setting like this:
+Add `"django_gulp"` to your `INSTALLED_APPS` setting like this, making sure
+that it comes before `django.contrib.staticfiles` (or other apps that override
+`runserver` or `collectstatic` in the list if they're listed:
 
 ```
 INSTALLED_APPS = (
