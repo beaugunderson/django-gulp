@@ -12,7 +12,7 @@ compiled from SASS.
 
 Add `"django_gulp"` to your `INSTALLED_APPS` setting like this, making sure
 that it comes before `django.contrib.staticfiles` (or other apps that override
-`runserver` or `collectstatic` in the list if they're listed:
+`runserver` or `collectstatic` in the list if they're listed):
 
 ```
 INSTALLED_APPS = (
