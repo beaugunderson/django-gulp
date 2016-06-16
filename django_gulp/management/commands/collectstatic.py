@@ -32,7 +32,7 @@ class Command(BaseCommand):
             }
 
         gulp_command = getattr(settings, 'GULP_PRODUCTION_COMMAND', 'gulp build --production')
-        subprocess.Popen([gulp_command],
+        subprocess.Popen(gulp_command,
                          **popen_args).wait()
 
         super(Command, self).handle(*args, **options)

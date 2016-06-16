@@ -104,7 +104,7 @@ class Command(StaticfilesRunserverCommand):
 
         gulp_command = getattr(settings, 'GULP_DEVELOP_COMMAND', 'gulp')
         self.gulp_process = subprocess.Popen(
-            [gulp_command],
+            gulp_command,
             shell=True,
             stdin=subprocess.PIPE,
             stdout=self.stdout,
