@@ -33,8 +33,9 @@ class Command(BaseCommand):
                          ':/app/.heroku/node/bin')
             }
 
+        gulp_cwd = getattr(settings, 'GULP_CWD', os.getcwd())
         gulp_command = getattr(
-            settings, 'GULP_PRODUCTION_COMMAND', 'gulp build --production')
+            settings, 'GULP_PRODUCTION_COMMAND', 'gulp build --cwd %s --production' % gulp_cwd)
         try:
             subprocess.check_call(gulp_command, **popen_kwargs)
         except subprocess.CalledProcessError as e:
