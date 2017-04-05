@@ -20,7 +20,7 @@ setup(
 
     install_requires=[
         'ansicolors==1.0.2',
-        'env_tools==2.0',
+        'env-tools==2.0.0',
         'futures==3.0.5',
         'psutil==4.3.0',
     ],
