@@ -19,8 +19,8 @@ class Command(BaseCommand):
         popen_kwargs = {
             'shell': True,
             'stdin': subprocess.PIPE,
-            'stdout': self.stdout,
-            'stderr': self.stderr
+            'stdout': self.stdout._out,
+            'stderr': self.stderr._out
         }
 
         # HACK: This command is executed without node_modules in the PATH
