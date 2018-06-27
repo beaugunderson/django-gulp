@@ -12,7 +12,7 @@ setup(
 
     keywords=['django', 'gulp'],
 
-    version='4.0.1',
+    version='4.1.0',
 
     license='MIT',
 
