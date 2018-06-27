@@ -26,8 +26,10 @@ Now when you run `./manage.py runserver` or `./manage.py collectstatic` your
 
 ### Settings
 
+`GULP_CWD` defaults to the current working directory. Override it if your `gulpfile.js` does not reside within the Django project's toplevel directory.
+
 `GULP_PRODUCTION_COMMAND` defaults to `gulp build --production`.
-`GULP_DEVELOP_COMMAND` defaults to `gulp`.
+`GULP_DEVELOP_COMMAND` defaults to `gulp`. Note that when specifying this setting manually, `GULP_CWD` is ignored.
 
 ### Heroku
 
