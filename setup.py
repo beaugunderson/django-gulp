@@ -12,17 +12,17 @@ setup(
 
     keywords=['django', 'gulp'],
 
-    version='3.0.0',
+    version='4.0.0',
 
     license='MIT',
 
     packages=find_packages(),
 
     install_requires=[
-        'ansicolors==1.1.8',
-        'env-tools==2.1.0',
-        'futures==3.1.1',
-        'psutil==5.2.2',
+        'ansicolors>=1.1.8,<2.0',
+        'env-tools>=2.2.0,<3.0',
+        'futures>=3.1.1,<4.0',
+        'psutil>=5.2.2,<6.0',
     ],
 
     setup_requires=[
